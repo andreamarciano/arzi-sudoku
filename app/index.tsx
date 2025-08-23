@@ -1,12 +1,24 @@
-import { StatusBar } from "expo-status-bar";
-import { Text, View } from "react-native";
+import { useEffect } from "react";
+import { useRouter } from "expo-router";
+import { View, Image } from "react-native";
 import "./styles/global.css";
 
-export default function Home() {
+export default function SplashScreen() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      router.replace("/main");
+    }, 1500);
+    return () => clearTimeout(timer);
+  });
+
   return (
     <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-xl font-bold text-blue-500">Home</Text>
-      <StatusBar style="auto" />
+      <Image
+        source={require("./assets/arzi-logo.jpg")}
+        style={{ width: 200, height: 200, resizeMode: "contain" }}
+      />
     </View>
   );
 }
