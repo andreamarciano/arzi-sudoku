@@ -5,8 +5,8 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@assets/*": ["app/assets/*"],
-      "@components/*": ["app/components/*"]
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"]
     }
   },
   "exclude": ["node_modules"]
