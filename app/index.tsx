@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useRouter } from "expo-router";
 import { View, Image } from "react-native";
-import "../src/assets/styles/global.css";
+import "@assets/styles/global.css";
 import Logo from "@assets/img/arzi-logo.jpg";
 
 export default function SplashScreen() {
